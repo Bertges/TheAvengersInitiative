@@ -21,23 +21,26 @@ class ViewController: UIViewController {
 
     func exercicioOpcionais() {
 
-
-        <#keyword#> let name = self.name {
+        // descomentar abaixo para entrar no if
+        name = "Guardiões da Galáxia"
+        if let name = self.name {
             debugPrint(name)
+            // valor esperado: "Guardiões da Galáxia"
         }
 
         // descomentar abaixo para passar no guard
-        //guardians = ["Peter", "Gamora", "Rocket", "Drax", "Groot"]
-        <#keyword#> let guardiansNames = self.guardians else {
+        guardians = ["Peter", "Gamora", "Rocket", "Drax", "Groot"]
+        guard let guardiansNames = self.guardians else {
             debugPrint(guardians)
             // valor esperado: nil
             return
         }
 
         debugPrint(guardiansNames)
-        // valor esperado:
+        // valor esperado: ["Peter", "Gamora", "Rocket", "Drax", "Groot"]
 
 
-        debugPrint(releaseYear <#nil coalescing#>)
+        debugPrint(releaseYear ?? 2014)
+        // valor esperado: 2014
     }
 }
