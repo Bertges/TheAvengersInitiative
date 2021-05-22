@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         exercicioControleDeFluxoIfElseIf()
-//        exercicioControleDeFluxoFor()
+        exercicioControleDeFluxoFor()
         exercicioControleDeFluxoSwitch()
     }
 
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         }
 
         // TODO: O código abaixo quebra ao rodar. Como podemos arrumar?
-        for index in 0...guardians.count {
+        for index in 0..<guardians.count {
             if guardians[index] == capitan {
                 debugPrint("\(index) - \(guardians[index]) is the capitan")
             }
