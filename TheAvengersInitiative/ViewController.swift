@@ -9,38 +9,65 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var name: String?
-    var guardians: [String]?
-    var releaseYear: Int?
+    var guardians: [String] = ["Peter", "Gamora", "Drax", "Groot", "Rocket", "Mantis"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        exercicioOpcionais()
+        exercicioControleDeFluxoIfElseIf()
+//        exercicioControleDeFluxoFor()
+        exercicioControleDeFluxoSwitch()
     }
 
-    func exercicioOpcionais() {
+    func exercicioControleDeFluxoIfElseIf() {
+        let capitan: String = "Peter"
 
-        // descomentar abaixo para entrar no if
-        name = "Guardiões da Galáxia"
-        if let name = self.name {
-            debugPrint(name)
-            // valor esperado: "Guardiões da Galáxia"
+        if capitan == "Gamora" {
+            debugPrint("Gamora is the capitan")
         }
 
-        // descomentar abaixo para passar no guard
-        guardians = ["Peter", "Gamora", "Rocket", "Drax", "Groot"]
-        guard let guardiansNames = self.guardians else {
-            debugPrint(guardians)
-            // valor esperado: nil
-            return
+        if capitan == "Drax" {
+            debugPrint("Drax is the capitan")
+        } else if capitan == "Groot" {
+            debugPrint("Groot is the capitan")
+        }
+    }
+
+    func exercicioControleDeFluxoFor() {
+        let capitan: String = "Peter"
+
+        for guardian in guardians {
+            if guardian == capitan {
+                debugPrint("\(guardian) is the capitan")
+            }
         }
 
-        debugPrint(guardiansNames)
-        // valor esperado: ["Peter", "Gamora", "Rocket", "Drax", "Groot"]
+        // TODO: O código abaixo quebra ao rodar. Como podemos arrumar?
+        for index in 0...guardians.count {
+            if guardians[index] == capitan {
+                debugPrint("\(index) - \(guardians[index]) is the capitan")
+            }
+        }
+    }
 
+    func exercicioControleDeFluxoSwitch() {
+        let capitan: String = "Peter"
 
-        debugPrint(releaseYear ?? 2014)
-        // valor esperado: 2014
+        switch capitan {
+        case "Peter":
+            debugPrint("Peter is the capitan")
+        case "Gamora":
+            debugPrint("Peter is the capitan")
+        case "Groot":
+            debugPrint("Groot is the capitan")
+        case "Drax":
+            debugPrint("Drax is the capitan")
+        case "Rocket":
+            debugPrint("Rocket is the capitan")
+        case "Mantis":
+            debugPrint("Mantis is the capitan")
+        default:
+            debugPrint("There is no capitan")
+        }
     }
 }
