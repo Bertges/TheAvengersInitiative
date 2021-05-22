@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let integer: Int = 10
+    var integer: Int = 10
     let double: Double = 10.0
     let string: String = "I am Groot"
     let boolean: Bool = true // false
@@ -23,6 +23,14 @@ class ViewController: UIViewController {
     let intTuple: (Int, Int) = (1, 2)
     let stringTuple: (Int, Int, Int, Int, Int) = (1, 2, 8, 9, 0)
     let multiTypesTuple: (Int, String, Bool) = (3, "tuple", true)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        exercicioOperadores()
+        exercicioStrings()
+        exerciciosArray()
+        exerciciosDictionary()
+    }
 
     func operacoesAritmeticas() {
         // Soma
@@ -48,16 +56,16 @@ class ViewController: UIViewController {
     func exercicioOperadores() {
         integer = 20
 
-        let guardiansOfTheGalaxyReleaseYear: Int = 2014.0
+        let guardiansOfTheGalaxyReleaseYear: Int = 2014
 
-        let guardiansOfTheGalaxy2ReleaseYear: Double = 2017.0
+        let guardiansOfTheGalaxy2ReleaseYear: Int = 2017
 
-        var yearsBetweenMovies: <#Tipo#> = <#operacao que retorne os anos entre os dois filmes#>
+        let yearsBetweenMovies: Int = guardiansOfTheGalaxy2ReleaseYear - guardiansOfTheGalaxyReleaseYear
 
-        debugPrint("Anos entre os filmes 01 e 02 = ")
+        debugPrint("Anos entre os filmes 01 e 02 = \(yearsBetweenMovies)")
         // valor esperado: "Anos entre os filmes 01 e 02 = 3". ps: utilize a variavel yearsBetweenMovies
 
-        debugPrint(yearsBetweenMovies <#operador#> 3)
+        debugPrint(yearsBetweenMovies == 3)
         // valor esperado: true
     }
 
@@ -65,30 +73,38 @@ class ViewController: UIViewController {
         let peter: String = "Peter Quill"
         let grootWelcomeMessage: String = "I am Groot"
 
-        debugPrint(<#primeiro valor#> <#operador#> <#segundo valor#>)
+        debugPrint("Olá \(peter), " +  grootWelcomeMessage)
         // valor esperado: "Olá Peter Quill, I am Groot"
     }
 
     func exerciciosArray() {
-        let guardians: [String] = ["Start Lord", "Gamora", "Rocket", "Drax", "Groot"]
+        var guardians: [String] = ["Star Lord", "Gamora", "Rocket", "Drax", "Groot"]
 
-        debugPrint(<#subscript de guardians#>)
+        debugPrint(guardians[2])
         // valor esperado: "Rocket"
 
-        // TODO: Adicionar a Mantis aos guardiões
+        guardians.append("Mantis")
         debugPrint(guardians)
         // valor esperado: ["Start Lord", "Gamora", "Rocket", "Drax", "Groot", "Mantis"]
 
-        // TODO: Remover a Gamora dos gurdiões
-        debugPrint(guardians)
-        // valor esperado: ["Start Lord", "Rocket", "Drax", "Groot", "Mantis"]
+        if let index = guardians.firstIndex(of: "Gamora") {
+            guardians.remove(at: index)
+            debugPrint(guardians)
+            // valor esperado: ["Start Lord", "Rocket", "Drax", "Groot", "Mantis"]
+        }
 
-        let rocketAndDrax: [String] = <#guardians.filter#>
+        let rocketAndDrax: [String] = guardians.filter({ guardian in
+            return (guardian == "Rocket" || guardian == "Drax")
+        })
         debugPrint(rocketAndDrax)
         // valor esperado: ["Rocket", "Drax"]
 
-        let killedByThanos: [Bool] = <#guardians.map#>
-        debugPrint(guardians)
+        let killedByThanos: [Bool] = guardians.map({ guardian in
+            let killedByThanos: [String] = ["Star Lord", "Gamora", "Drax", "Groot", "Mantis"]
+
+            return killedByThanos.contains(guardian)
+        })
+        debugPrint(killedByThanos)
         // valor esperado: [true, false, true, true, true]
     }
 
@@ -98,12 +114,14 @@ class ViewController: UIViewController {
                                         "director": "James Gunn",
                                         "cast": ["Chris Pratt", "Dave Bautista", "Zoe Saldaña", "Vin Diesel"]]
 
-        let releaseYear: Int = <#guardians[releaseYear]#>
-        debugPrint(releaseYear)
-        // valor esperado: 2014
+        if let releaseYear: Int = guardians["releaseYear"] as? Int {
+            debugPrint(releaseYear)
+            // valor esperado: 2014
+        }
 
-        debugPrint(<#T##items: Any...##Any#>)
-        // valor esperado: "James Gunn"
+
+        debugPrint(guardians["director"])
+        // valor esperado: "Optional("James Gunn")"
     }
 }
 
