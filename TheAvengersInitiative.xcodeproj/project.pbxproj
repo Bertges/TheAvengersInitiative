@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D6DBBF6267134E800123252 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6DBBF5267134E800123252 /* MainCoordinator.swift */; };
 		7DFD2A0226597FA8005D38A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD2A0126597FA8005D38A7 /* AppDelegate.swift */; };
-		7DFD2A0426597FA9005D38A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD2A0326597FA9005D38A7 /* SceneDelegate.swift */; };
 		7DFD2A0626597FA9005D38A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD2A0526597FA9005D38A7 /* ViewController.swift */; };
 		7DFD2A0926597FA9005D38A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD2A0726597FA9005D38A7 /* Main.storyboard */; };
 		7DFD2A0B26597FAA005D38A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD2A0A26597FAA005D38A7 /* Assets.xcassets */; };
 		7DFD2A0E26597FAA005D38A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD2A0C26597FAA005D38A7 /* LaunchScreen.storyboard */; };
 		7DFD2A1926597FAB005D38A7 /* TheAvengersInitiativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD2A1826597FAB005D38A7 /* TheAvengersInitiativeTests.swift */; };
 		7DFD2A2426597FAB005D38A7 /* TheAvengersInitiativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD2A2326597FAB005D38A7 /* TheAvengersInitiativeUITests.swift */; };
+		7DFEC6EF26728E6C0036A72B /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFEC6EE26728E6C0036A72B /* CharactersListViewController.swift */; };
+		7DFEC6F526728E9F0036A72B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFEC6F426728E9F0036A72B /* Coordinator.swift */; };
+		7DFEC6FA26728EC40036A72B /* CharacterListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFEC6F926728EC40036A72B /* CharacterListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D6DBBF5267134E800123252 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		7DFD29FE26597FA8005D38A7 /* TheAvengersInitiative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheAvengersInitiative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFD2A0126597FA8005D38A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7DFD2A0326597FA9005D38A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7DFD2A0526597FA9005D38A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7DFD2A0826597FA9005D38A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DFD2A0A26597FAA005D38A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		7DFD2A1F26597FAB005D38A7 /* TheAvengersInitiativeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheAvengersInitiativeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFD2A2326597FAB005D38A7 /* TheAvengersInitiativeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheAvengersInitiativeUITests.swift; sourceTree = "<group>"; };
 		7DFD2A2526597FAB005D38A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DFEC6EE26728E6C0036A72B /* CharactersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewController.swift; sourceTree = "<group>"; };
+		7DFEC6F426728E9F0036A72B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7DFEC6F926728EC40036A72B /* CharacterListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D6DBBF3267134AD00123252 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7D6DBBF4267134CB00123252 /* Coordinator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7D6DBBF4267134CB00123252 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7D6DBBF5267134E800123252 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		7DFD29F526597FA8005D38A7 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +121,10 @@
 		7DFD2A0026597FA8005D38A7 /* TheAvengersInitiative */ = {
 			isa = PBXGroup;
 			children = (
+				7DFEC6F326728E910036A72B /* Protocols */,
+				7DFEC6E826728DEC0036A72B /* CharactersList */,
+				7D6DBBF3267134AD00123252 /* Main */,
 				7DFD2A0126597FA8005D38A7 /* AppDelegate.swift */,
-				7DFD2A0326597FA9005D38A7 /* SceneDelegate.swift */,
 				7DFD2A0526597FA9005D38A7 /* ViewController.swift */,
 				7DFD2A0726597FA9005D38A7 /* Main.storyboard */,
 				7DFD2A0A26597FAA005D38A7 /* Assets.xcassets */,
@@ -126,6 +150,63 @@
 				7DFD2A2526597FAB005D38A7 /* Info.plist */,
 			);
 			path = TheAvengersInitiativeUITests;
+			sourceTree = "<group>";
+		};
+		7DFEC6E826728DEC0036A72B /* CharactersList */ = {
+			isa = PBXGroup;
+			children = (
+				7DFEC6ED26728E3A0036A72B /* Models */,
+				7DFEC6EC26728E140036A72B /* Views */,
+				7DFEC6EB26728E0B0036A72B /* Controllers */,
+				7DFEC6EA26728E060036A72B /* ViewModels */,
+				7DFEC6E926728DF70036A72B /* Coordinators */,
+			);
+			path = CharactersList;
+			sourceTree = "<group>";
+		};
+		7DFEC6E926728DF70036A72B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				7DFEC6F926728EC40036A72B /* CharacterListCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		7DFEC6EA26728E060036A72B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7DFEC6EB26728E0B0036A72B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7DFEC6EE26728E6C0036A72B /* CharactersListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7DFEC6EC26728E140036A72B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7DFEC6ED26728E3A0036A72B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7DFEC6F326728E910036A72B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7DFEC6F426728E9F0036A72B /* Coordinator.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFEC6FA26728EC40036A72B /* CharacterListCoordinator.swift in Sources */,
+				7DFEC6EF26728E6C0036A72B /* CharactersListViewController.swift in Sources */,
 				7DFD2A0626597FA9005D38A7 /* ViewController.swift in Sources */,
+				7DFEC6F526728E9F0036A72B /* Coordinator.swift in Sources */,
+				7D6DBBF6267134E800123252 /* MainCoordinator.swift in Sources */,
 				7DFD2A0226597FA8005D38A7 /* AppDelegate.swift in Sources */,
-				7DFD2A0426597FA9005D38A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.sky.estagio2021.TheAvengersInitiative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = HML;
 		};
@@ -509,7 +593,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -517,7 +601,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.sky.estagio2021.TheAvengersInitiative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Debug HMl";
 		};
@@ -688,7 +772,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -696,7 +780,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.sky.estagio2021.TheAvengersInitiative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -709,7 +793,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -717,7 +801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.sky.estagio2021.TheAvengersInitiative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
