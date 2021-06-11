@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D6DBBF6267134E800123252 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6DBBF5267134E800123252 /* MainCoordinator.swift */; };
+		7DCF68FC2673D63F007A48CC /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF68FB2673D63F007A48CC /* CharactersListView.swift */; };
 		7DFD2A0226597FA8005D38A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD2A0126597FA8005D38A7 /* AppDelegate.swift */; };
 		7DFD2A0626597FA9005D38A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD2A0526597FA9005D38A7 /* ViewController.swift */; };
 		7DFD2A0926597FA9005D38A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFD2A0726597FA9005D38A7 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7D6DBBF5267134E800123252 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7DCF68FB2673D63F007A48CC /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
 		7DFD29FE26597FA8005D38A7 /* TheAvengersInitiative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheAvengersInitiative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFD2A0126597FA8005D38A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DFD2A0526597FA9005D38A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		7DFEC6EC26728E140036A72B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7DCF68FB2673D63F007A48CC /* CharactersListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				7DFEC6EF26728E6C0036A72B /* CharactersListViewController.swift in Sources */,
 				7DFD2A0626597FA9005D38A7 /* ViewController.swift in Sources */,
 				7DFEC6F526728E9F0036A72B /* Coordinator.swift in Sources */,
+				7DCF68FC2673D63F007A48CC /* CharactersListView.swift in Sources */,
 				7D6DBBF6267134E800123252 /* MainCoordinator.swift in Sources */,
 				7DFD2A0226597FA8005D38A7 /* AppDelegate.swift in Sources */,
 			);

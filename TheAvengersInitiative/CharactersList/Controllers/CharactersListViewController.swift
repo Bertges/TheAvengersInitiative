@@ -8,9 +8,15 @@
 import UIKit
 
 final class CharactersListViewController: UIViewController {
+
+    // Properties
+    let _view: CharactersLitView = .init()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        view.addSubview(UIView())
+    override func loadView() {
+        view = _view
     }
 }

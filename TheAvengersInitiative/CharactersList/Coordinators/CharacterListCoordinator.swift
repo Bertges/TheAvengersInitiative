@@ -22,7 +22,6 @@ final class CharacterListCoordinator: Coordinator {
     // Coordinator
     func start() {
         let controller: CharactersListViewController = .init()
-        controller.view.backgroundColor = .red
 
         characterListController = controller
         navigation = UINavigationController(rootViewController: controller)
