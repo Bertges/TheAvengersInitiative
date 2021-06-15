@@ -10,7 +10,7 @@ import UIKit
 final class CharactersListViewController: UIViewController {
 
     // Properties
-    let _view: CharactersLitView = .init()
+    let _view: CharactersListView = .init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
