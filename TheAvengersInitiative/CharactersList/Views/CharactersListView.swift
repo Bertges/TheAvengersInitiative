@@ -53,6 +53,8 @@ extension CharactersListView: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return CharacterListCell()
+        let cell: CharacterListCell = CharacterListCell()
+        cell.setup()
+        return cell
     }
 }
