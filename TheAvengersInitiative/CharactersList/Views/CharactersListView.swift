@@ -18,7 +18,10 @@ final class CharactersListView: UIView, ViewCode {
         return tableView
     }()
 
-    init() {
+    let viewModel: CharacterListViewModel
+
+    init(viewModel: CharacterListViewModel = CharacterListViewModel()) {
+        self.viewModel = viewModel
         super.init(frame: .zero)
         setupViews()
     }
@@ -49,12 +52,13 @@ final class CharactersListView: UIView, ViewCode {
 
 extension CharactersListView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.numberOfRows
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CharacterListCell = CharacterListCell()
-        cell.setup()
+
+        cell.setup(name: viewModel.name(at: indexPath.row), comicsCount: viewModel.comicsCount(at: indexPath.row), avatarUrl: viewModel.avatarUrl(at: indexPath.row))
         return cell
     }
 }

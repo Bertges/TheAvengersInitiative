@@ -33,30 +33,42 @@ final class CharacterListCell: UITableViewCell, ViewCode {
         return label
     }()
 
-    func setup() {
+    let stackView: UIStackView = {
+        let stackView: UIStackView = .init(frame: .zero)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 8
+        stackView.distribution = .fillProportionally
+        stackView.axis = .horizontal
+        stackView.alignment = .bottom
+        return stackView
+    }()
+
+    func setup(name: String, comicsCount: Int, avatarUrl: URL) {
         setupViews()
+
+        characterNameLabel.text = name
+        characterComicsCount.text = "\(comicsCount)"
     }
 
     // ViewCode
     func setupViewsHierarchy() {
-        contentView.addSubview(characterImageView)
-        contentView.addSubview(characterNameLabel)
-        contentView.addSubview(characterComicsCount)
+        contentView.addSubview(stackView)
+            stackView.addArrangedSubview(characterImageView)
+            stackView.addArrangedSubview(characterNameLabel)
+            stackView.addArrangedSubview(characterComicsCount)
     }
 
     func setupConstraints() {
-        characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
-        characterImageView.topAnchor.constraint(greaterThanOrEqualTo: contentView.topAnchor, constant: 8).isActive = true
-        characterImageView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -8).isActive = true
+        stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         characterImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         characterImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
-
-        characterNameLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 8).isActive = true
-        characterNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
-        characterNameLabel.bottomAnchor.constraint(equalTo: characterImageView.bottomAnchor).isActive = true
+        characterComicsCount.widthAnchor.constraint(equalToConstant: 40).isActive = true
     }
 
     func configureViews() {
-        
+
     }
 }
