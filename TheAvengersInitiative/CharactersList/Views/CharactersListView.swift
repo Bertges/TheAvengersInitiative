@@ -52,7 +52,9 @@ extension CharactersListView: UITableViewDataSource, UITableViewDelegate {
         return 10
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return CharacterListCell()
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)-> UITableViewCell{
+		let cell: CharacterListCell = CharacterListCell()
+		cell.setup()
+		return cell
     }
 }
