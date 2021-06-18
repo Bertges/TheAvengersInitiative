@@ -19,6 +19,16 @@ final class CharacterListViewModel {
                                      Character(name: "Viúva Negra", comicList: ComicList(available: 6)),
                                      Character(name: "Visão", comicList: ComicList(available: 7)),
                                      Character(name: "Rocket", comicList: ComicList(available: 8)),
+                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
+                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
+                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
+                                     Character(name: "Thor", comicList: ComicList(available: 4)),
+                                     Character(name: "Capitão América", comicList: ComicList(available: 5)),
+                                     Character(name: "Viúva Negra", comicList: ComicList(available: 6)),
+                                     Character(name: "Visão", comicList: ComicList(available: 7)),
+                                     Character(name: "Rocket", comicList: ComicList(available: 8)),
+                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
+                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
                                      Character(name: "Hulk", comicList: ComicList(available: 9))]) {
         self.characteres = characteres
     }

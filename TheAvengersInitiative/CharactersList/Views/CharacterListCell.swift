@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class CharacterListCell: UITableViewCell, ViewCode {
+
+    static let identifier: String = "CharacterListCell"
 
     // Properties
     let characterImageView: UIImageView = {
@@ -19,7 +22,7 @@ final class CharacterListCell: UITableViewCell, ViewCode {
 
     let characterNameLabel: UILabel = {
         let label: UILabel = .init(frame: .zero)
-        label.text = "Nome do Personagem"
+        label.text = "Falha ao carregar informações"
         label.backgroundColor = .blue
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -27,7 +30,7 @@ final class CharacterListCell: UITableViewCell, ViewCode {
 
     let characterComicsCount: UILabel = {
         let label: UILabel = .init(frame: .zero)
-        label.text = "222"
+        label.text = ""
         label.backgroundColor = .gray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -48,6 +51,7 @@ final class CharacterListCell: UITableViewCell, ViewCode {
 
         characterNameLabel.text = name
         characterComicsCount.text = "\(comicsCount)"
+        characterImageView.kf.setImage(with: avatarUrl)
     }
 
     // ViewCode

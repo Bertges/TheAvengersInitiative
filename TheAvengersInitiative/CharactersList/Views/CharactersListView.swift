@@ -46,6 +46,7 @@ final class CharactersListView: UIView, ViewCode {
     }
 
     func configureViews() {
+        tableView.register(CharacterListCell.self, forCellReuseIdentifier: CharacterListCell.identifier)
         backgroundColor = .white
     }
 }
@@ -56,9 +57,12 @@ extension CharactersListView: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CharacterListCell = CharacterListCell()
+        guard let cell: CharacterListCell = tableView.dequeueReusableCell(withIdentifier: CharacterListCell.identifier, for: indexPath) as? CharacterListCell else {
+            return CharacterListCell()
+        }
 
         cell.setup(name: viewModel.name(at: indexPath.row), comicsCount: viewModel.comicsCount(at: indexPath.row), avatarUrl: viewModel.avatarUrl(at: indexPath.row))
+
         return cell
     }
 }
