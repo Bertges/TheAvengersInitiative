@@ -10,6 +10,7 @@
 		7D55FFBE26791A5300CBA8C9 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D55FFBD26791A5200CBA8C9 /* ViewCode.swift */; };
 		7D55FFC32679201300CBA8C9 /* CharacterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D55FFC22679201300CBA8C9 /* CharacterListCell.swift */; };
 		7D6DBBF6267134E800123252 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6DBBF5267134E800123252 /* MainCoordinator.swift */; };
+		7DA0E3692684F58800395394 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0E3682684F58800395394 /* APIHelper.swift */; };
 		7DBD9541267BC25200D98D7D /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD9540267BC25200D98D7D /* Character.swift */; };
 		7DBD9546267BC30900D98D7D /* ComicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD9545267BC30900D98D7D /* ComicList.swift */; };
 		7DBD954E267BC6A000D98D7D /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD954D267BC6A000D98D7D /* CharacterListViewModel.swift */; };
@@ -48,6 +49,7 @@
 		7D55FFBD26791A5200CBA8C9 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		7D55FFC22679201300CBA8C9 /* CharacterListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCell.swift; sourceTree = "<group>"; };
 		7D6DBBF5267134E800123252 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7DA0E3682684F58800395394 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		7DBD9540267BC25200D98D7D /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		7DBD9545267BC30900D98D7D /* ComicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicList.swift; sourceTree = "<group>"; };
 		7DBD954D267BC6A000D98D7D /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				7DFD2A0A26597FAA005D38A7 /* Assets.xcassets */,
 				7DFD2A0C26597FAA005D38A7 /* LaunchScreen.storyboard */,
 				7DFD2A0F26597FAA005D38A7 /* Info.plist */,
+				7DA0E3682684F58800395394 /* APIHelper.swift */,
 			);
 			path = TheAvengersInitiative;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				7D6DBBF6267134E800123252 /* MainCoordinator.swift in Sources */,
 				7DBD9546267BC30900D98D7D /* ComicList.swift in Sources */,
 				7DBD9541267BC25200D98D7D /* Character.swift in Sources */,
+				7DA0E3692684F58800395394 /* APIHelper.swift in Sources */,
 				7DFD2A0226597FA8005D38A7 /* AppDelegate.swift in Sources */,
 				7D55FFBE26791A5300CBA8C9 /* ViewCode.swift in Sources */,
 			);

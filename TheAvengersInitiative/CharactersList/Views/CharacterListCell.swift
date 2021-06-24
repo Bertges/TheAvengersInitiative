@@ -7,7 +7,7 @@
 
 import UIKit
 import Kingfisher
-
+final class TableViewCell: UITableViewCell {}
 final class CharacterListCell: UITableViewCell, ViewCode {
 
     static let identifier: String = "CharacterListCell"
