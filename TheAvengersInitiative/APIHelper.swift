@@ -8,6 +8,6 @@
 import Foundation
 
 final class APIHelper {
-    static let marvelAPIKey: String = ""
-    static let marvelPrivateAPIKey: String = ""
+    static let marvelAPIKey: String = <#public API KEY#>
+    static let marvelPrivateAPIKey: String = <#private API key#>
 }
