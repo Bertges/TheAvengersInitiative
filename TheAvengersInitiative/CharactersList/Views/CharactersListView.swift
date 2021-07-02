@@ -24,6 +24,11 @@ final class CharactersListView: UIView, ViewCode {
         self.viewModel = viewModel
         super.init(frame: .zero)
         setupViews()
+        load()
+    }
+
+    func load() {
+        viewModel.requestCharacters()
     }
 
     @available(*, unavailable)

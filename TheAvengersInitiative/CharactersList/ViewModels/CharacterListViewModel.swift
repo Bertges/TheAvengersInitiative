@@ -11,26 +11,12 @@ final class CharacterListViewModel {
 
     // MARK: - Properties
     let characteres: [Character]
+    let api: CharactersAPIProtocol
 
     // MARK: - Init
-    init(characteres: [Character] = [Character(name: "Iron Man", comicList: ComicList(available: 3)),
-                                     Character(name: "Thor", comicList: ComicList(available: 4)),
-                                     Character(name: "Capitão América", comicList: ComicList(available: 5)),
-                                     Character(name: "Viúva Negra", comicList: ComicList(available: 6)),
-                                     Character(name: "Visão", comicList: ComicList(available: 7)),
-                                     Character(name: "Rocket", comicList: ComicList(available: 8)),
-                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
-                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
-                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
-                                     Character(name: "Thor", comicList: ComicList(available: 4)),
-                                     Character(name: "Capitão América", comicList: ComicList(available: 5)),
-                                     Character(name: "Viúva Negra", comicList: ComicList(available: 6)),
-                                     Character(name: "Visão", comicList: ComicList(available: 7)),
-                                     Character(name: "Rocket", comicList: ComicList(available: 8)),
-                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
-                                     Character(name: "Hulk", comicList: ComicList(available: 9)),
-                                     Character(name: "Hulk", comicList: ComicList(available: 9))]) {
+    init(characteres: [Character] = [], api: CharactersAPIProtocol = CharactersAPI()) {
         self.characteres = characteres
+        self.api = api
     }
 
     func name(at index: Int) -> String {
@@ -42,10 +28,14 @@ final class CharacterListViewModel {
     }
 
     func avatarUrl(at index: Int) -> URL {
-        return characteres[index].image
+        return characteres[index].thumbnail.path
     }
 
     var numberOfRows: Int {
         return characteres.count
+    }
+
+    func requestCharacters() {
+        api.getCharacters(offset: 0)
     }
 }

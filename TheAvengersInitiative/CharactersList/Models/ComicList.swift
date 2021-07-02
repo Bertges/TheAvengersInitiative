@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ComicList {
+final class ComicList: Codable {
     let available: Int
 
     init(available: Int) {
