@@ -28,7 +28,9 @@ final class CharactersListView: UIView, ViewCode {
     }
 
     func load() {
-        viewModel.requestCharacters()
+        viewModel.requestCharacters(completion: {
+            self.tableView.reloadData()
+        })
     }
 
     @available(*, unavailable)

@@ -48,16 +48,7 @@ final class CharactersListWrapper: Codable {
     }
 
     init(from decoder: Decoder) throws {
-        do {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-
-            data = try container.decode(CharacterListData.self, forKey: .data)
-
-            return
-        } catch(let error) {
-            debugPrint(error)
-        }
-
-        fatalError()
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        data = try container.decode(CharacterListData.self, forKey: .data)
     }
 }

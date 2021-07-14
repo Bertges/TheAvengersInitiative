@@ -10,7 +10,7 @@ import Foundation
 final class CharacterListViewModel {
 
     // MARK: - Properties
-    let characteres: [Character]
+    var characteres: [Character]
     let api: CharactersAPIProtocol
 
     // MARK: - Init
@@ -28,14 +28,24 @@ final class CharacterListViewModel {
     }
 
     func avatarUrl(at index: Int) -> URL {
-        return characteres[index].thumbnail.path
+        let thumbnail: Character.Thumbnail = characteres[index].thumbnail
+        return thumbnail.path.appendingPathExtension(thumbnail.thumbExtension)
     }
 
     var numberOfRows: Int {
         return characteres.count
     }
 
-    func requestCharacters() {
-        api.getCharacters(offset: 0)
+    func requestCharacters(completion: @escaping (() -> Void)) {
+        api.getCharacters(offset: 0) { result in
+            switch result {
+            case let .success(wrapper):
+                self.characteres = wrapper.data.results
+            case let .error(error):
+                break
+            }
+
+            completion()
+        }
     }
 }

@@ -16,14 +16,12 @@ final class CharacterListCell: UITableViewCell, ViewCode {
     let characterImageView: UIImageView = {
         let imageView: UIImageView = .init()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .red
         return imageView
     }()
 
     let characterNameLabel: UILabel = {
         let label: UILabel = .init(frame: .zero)
         label.text = "Falha ao carregar informações"
-        label.backgroundColor = .blue
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -31,7 +29,6 @@ final class CharacterListCell: UITableViewCell, ViewCode {
     let characterComicsCount: UILabel = {
         let label: UILabel = .init(frame: .zero)
         label.text = ""
-        label.backgroundColor = .gray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

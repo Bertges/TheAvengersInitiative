@@ -35,9 +35,13 @@ final class RequestManager: RequestManagerProtocol {
 
             let decoder: JSONDecoder = .init()
             if let decodedObj: T = try? decoder.decode(T.self, from: data) {
-                completion(.success(decodedObj))
+                DispatchQueue.main.async {
+                    completion(.success(decodedObj))
+                }
             } else {
-                completion(.error(RequestError.decode))
+                DispatchQueue.main.async {
+                    completion(.error(RequestError.decode))
+                }
             }
         }
 
