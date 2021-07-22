@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CharactersListViewDelegate {
+    func didSelectCharacater(_ character: Character)
+}
+
 final class CharactersListView: UIView, ViewCode {
 
     // Properties
@@ -19,10 +23,13 @@ final class CharactersListView: UIView, ViewCode {
     }()
 
     let viewModel: CharacterListViewModel
+    var delegate: CharactersListViewDelegate?
 
-    init(viewModel: CharacterListViewModel = CharacterListViewModel()) {
+    init(viewModel: CharacterListViewModel = CharacterListViewModel(), delegate: CharactersListViewDelegate?) {
         self.viewModel = viewModel
+        self.delegate = delegate
         super.init(frame: .zero)
+
         setupViews()
         load()
     }
@@ -71,5 +78,10 @@ extension CharactersListView: UITableViewDataSource, UITableViewDelegate {
         cell.setup(name: viewModel.name(at: indexPath.row), comicsCount: viewModel.comicsCount(at: indexPath.row), avatarUrl: viewModel.avatarUrl(at: indexPath.row))
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let character: Character = viewModel.characteres[indexPath.row]
+        delegate?.didSelectCharacater(character)
     }
 }

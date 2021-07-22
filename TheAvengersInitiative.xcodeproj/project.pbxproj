@@ -104,6 +104,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D36A161269F58A9003698C1 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
 		7D392867268CDE9400561738 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +175,7 @@
 		7DFD2A0026597FA8005D38A7 /* TheAvengersInitiative */ = {
 			isa = PBXGroup;
 			children = (
+				7D36A161269F58A9003698C1 /* CharacterDetail */,
 				7D392867268CDE9400561738 /* Manager */,
 				7DFEC6F326728E910036A72B /* Protocols */,
 				7DFEC6E826728DEC0036A72B /* CharactersList */,

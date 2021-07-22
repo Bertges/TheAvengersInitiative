@@ -21,12 +21,16 @@ final class CharacterListCoordinator: Coordinator {
 
     // Coordinator
     func start() {
-        let controller: CharactersListViewController = .init()
+        let controller: CharactersListViewController = .init(coordinator: self)
 
         characterListController = controller
         navigation = UINavigationController(rootViewController: controller)
 
         window.rootViewController = navigation
         window.makeKeyAndVisible()
+    }
+
+    func didSelectCharacter(_ character: Character) {
+        
     }
 }
