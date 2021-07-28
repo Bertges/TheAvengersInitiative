@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CharactersListViewDelegate {
+	func didSelectCharacter(_ character: Character)
+}
+
 final class CharactersListView: UIView, ViewCode {
 
     // Properties
@@ -17,11 +21,14 @@ final class CharactersListView: UIView, ViewCode {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
+	
+	var delegate: CharactersListViewDelegate?
 
     let viewModel: CharacterListViewModel
 
-    init(viewModel: CharacterListViewModel = CharacterListViewModel()) {
+	init(viewModel: CharacterListViewModel = CharacterListViewModel(), delegate: CharactersListViewDelegate? ) {
         self.viewModel = viewModel
+		self.delegate = delegate
         super.init(frame: .zero)
         setupViews()
         load()
@@ -58,7 +65,9 @@ final class CharactersListView: UIView, ViewCode {
     }
 }
 
-extension CharactersListView: UITableViewDataSource, UITableViewDelegate {
+extension CharactersListView: UITableViewDataSource, UITableViewDelegate{
+	
+	
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRows
     }
@@ -69,7 +78,11 @@ extension CharactersListView: UITableViewDataSource, UITableViewDelegate {
         }
 
         cell.setup(name: viewModel.name(at: indexPath.row), comicsCount: viewModel.comicsCount(at: indexPath.row), avatarUrl: viewModel.avatarUrl(at: indexPath.row))
-
         return cell
     }
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let character: Character = viewModel.characteres[indexPath.row]
+		delegate?.didSelectCharacter(character)
+	}
 }

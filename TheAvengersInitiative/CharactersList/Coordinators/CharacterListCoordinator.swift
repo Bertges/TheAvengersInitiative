@@ -13,20 +13,34 @@ final class CharacterListCoordinator: Coordinator {
     let window: UIWindow
     var navigation: UINavigationController?
     var characterListController: CharactersListViewController?
+	var characterDetailController: CharacterDetailViewController?
+	
 
     // Init
-    init(window: UIWindow) {
+	init(window: UIWindow) {
         self.window = window
     }
 
     // Coordinator
     func start() {
-        let controller: CharactersListViewController = .init()
+		let controller: CharactersListViewController = .init(coordinator: self)
 
         characterListController = controller
         navigation = UINavigationController(rootViewController: controller)
 
+		
         window.rootViewController = navigation
         window.makeKeyAndVisible()
     }
+	
+	
+	 func didSelectCharacter(_ character: Character) {
+		
+		let deitalvm: CharacterDetailViewModel = .init(character)
+		
+		let controllerDetail: CharacterDetailViewController = .init(detailvm: deitalvm)
+		
+		characterDetailController = controllerDetail
+		navigation?.pushViewController(controllerDetail, animated: true)
+	}
 }

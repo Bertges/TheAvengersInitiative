@@ -20,4 +20,5 @@ final class MainCoordinator: Coordinator {
         charactersCoordinator = .init(window: window)
         charactersCoordinator?.start()
     }
+	
 }

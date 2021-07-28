@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+
 final class TableViewCell: UITableViewCell {}
 final class CharacterListCell: UITableViewCell, ViewCode {
 
@@ -45,10 +45,9 @@ final class CharacterListCell: UITableViewCell, ViewCode {
 
     func setup(name: String, comicsCount: Int, avatarUrl: URL) {
         setupViews()
-
         characterNameLabel.text = name
         characterComicsCount.text = "\(comicsCount)"
-        characterImageView.kf.setImage(with: avatarUrl)
+		characterImageView.setImage(from: avatarUrl)
     }
 
     // ViewCode
