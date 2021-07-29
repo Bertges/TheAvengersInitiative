@@ -10,7 +10,7 @@ import Kingfisher
 
 final class CharacterDetailView: UIView, ViewCode {
     
-    let detailViewModel: CharacterDetailViewModel
+    private let detailViewModel: CharacterDetailViewModel
     
     init(detailvm: CharacterDetailViewModel) {
         self.detailViewModel = detailvm
@@ -23,7 +23,7 @@ final class CharacterDetailView: UIView, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    let stackView: UIStackView = {
+    private let stackView: UIStackView = {
         let stackView: UIStackView = .init(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -34,7 +34,7 @@ final class CharacterDetailView: UIView, ViewCode {
     }()
     
     // MARK: - Image
-    let characterImageView: UIStackView = {
+    private let characterImageView: UIStackView = {
         let stackView: UIStackView = .init(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -45,14 +45,14 @@ final class CharacterDetailView: UIView, ViewCode {
         return stackView
     }()
     
-    let characterImage: UIImageView = {
+    private let characterImage: UIImageView = {
         let imageView: UIImageView = .init()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     // MARK: - ID
-    let characterIDView: UIStackView = {
+    private let characterIDView: UIStackView = {
         let stackView: UIStackView = .init(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -63,7 +63,7 @@ final class CharacterDetailView: UIView, ViewCode {
         return stackView
     }()
     
-    let characterID: UILabel = {
+    private let characterID: UILabel = {
         let label: UILabel = .init(frame: .zero)
         label.text = ""
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -71,7 +71,7 @@ final class CharacterDetailView: UIView, ViewCode {
     }()
     
     // MARK: - Comics
-    let characterComicsView: UIStackView = {
+    private let characterComicsView: UIStackView = {
         let stackView: UIStackView = .init(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -82,7 +82,7 @@ final class CharacterDetailView: UIView, ViewCode {
         return stackView
     }()
     
-    let characterComics: UILabel = {
+    private let characterComics: UILabel = {
         let label: UILabel = .init(frame: .zero)
         label.text = ""
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -120,13 +120,8 @@ final class CharacterDetailView: UIView, ViewCode {
         stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         
         characterImageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 90).isActive = true
-//        characterImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
-//
         characterIDView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//        characterIDView.widthAnchor.constraint(equalToConstant: 50).isActive = true
-//
         characterComicsView.heightAnchor.constraint(greaterThanOrEqualToConstant: 70).isActive = true
-//        characterComicsView.widthAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     func configureViews() {

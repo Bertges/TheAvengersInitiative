@@ -9,7 +9,7 @@ import UIKit
 
 final class CharacterDetailViewModel {
     
-    let character: Character
+    private let character: Character
     
     init(character: Character) {
         self.character = character
