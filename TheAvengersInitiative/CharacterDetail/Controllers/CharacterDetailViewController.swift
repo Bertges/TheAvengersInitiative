@@ -12,7 +12,7 @@ final class CharacterDetailViewController: UIViewController {
 	private let _view: CharacterDetailView
 
 	init(detailViewModel: CharacterDetailViewModel) {
-			 self._view = CharacterDetailView(detailvm: detailViewModel)
+			 self._view = CharacterDetailView(detailViewModel: detailViewModel)
 			 super.init(nibName: nil, bundle: nil)
 	}
 	

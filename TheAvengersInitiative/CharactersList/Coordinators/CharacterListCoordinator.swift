@@ -38,9 +38,9 @@ final class CharacterListCoordinator: Coordinator {
 		
 		let deitalViewModel: CharacterDetailViewModel = .init(character)
 		
-		let controllerDetail: CharacterDetailViewController = .init(detailViewModel: deitalViewModel)
+		let detailViewController: CharacterDetailViewController = .init(detailViewModel: deitalViewModel)
 		
-		characterDetailController = controllerDetail
-		navigation?.pushViewController(controllerDetail, animated: true)
+		characterDetailController = detailViewController
+		navigation?.pushViewController(detailViewController, animated: true)
 	}
 }
