@@ -7,30 +7,24 @@
 
 import UIKit
 
-final class CharacterDetail: UIView, ViewCode {
+final class CharacterDetailView: UIView, ViewCode {
 	
 	
-	var stackView: UIStackView = {
+	private let stackView: UIStackView = {
 		let stackview: UIStackView = .init(frame: .zero)
 		stackview.translatesAutoresizingMaskIntoConstraints = false
 		stackview.axis = .vertical
 		return stackview
 	}()
 	
-	var imageStackView: UIStackView = {
+	private let imageStackView: UIStackView = {
 		let stackview: UIStackView = .init(frame: .zero)
 		stackview.translatesAutoresizingMaskIntoConstraints = false
 		stackview.axis = .vertical
 		return stackview
 	}()
 	
-	let image: UIImageView = {
-		let image: UIImageView = .init(frame: .zero)
-		image.translatesAutoresizingMaskIntoConstraints = false
-		return image
-	}()
-	
-	var nameStackView: UIStackView = {
+	private let nameStackView: UIStackView = {
 		let stackview: UIStackView = .init(frame: .zero)
 		stackview.translatesAutoresizingMaskIntoConstraints = false
 		stackview.axis = .horizontal
@@ -39,13 +33,27 @@ final class CharacterDetail: UIView, ViewCode {
 		return stackview
 	}()
 	
-	var countStackView: UIStackView = {
+	private let countStackView: UIStackView = {
 		let stackview: UIStackView = .init(frame: .zero)
 		stackview.translatesAutoresizingMaskIntoConstraints = false
 		stackview.axis = .vertical
 		return stackview
 	}()
+
+	private let image: UIImageView = {
+		let image: UIImageView = .init(frame: .zero)
+		image.translatesAutoresizingMaskIntoConstraints = false
+		return image
+	}()
 	
+	private let nome: UILabel = {
+		let name: UILabel = .init(frame: .zero)
+		name.translatesAutoresizingMaskIntoConstraints = false
+		name.text = "texto"
+		name.backgroundColor = .magenta
+		return name
+	}()
+
 	let detailvm : CharacterDetailViewModel
 	
 	init(detailvm: CharacterDetailViewModel) {
@@ -68,6 +76,9 @@ final class CharacterDetail: UIView, ViewCode {
 			stackView.addArrangedSubview(countStackView)
 		
 		imageStackView.addArrangedSubview(image)
+		
+		nameStackView.addArrangedSubview(nome)
+		
 	}
 	
 	func setupConstraints() {

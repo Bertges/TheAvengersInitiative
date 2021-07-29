@@ -8,8 +8,8 @@
 import Kingfisher
 import UIKit
 
-extension UIImageView{
-	func setImage(from url: URL){
+extension UIImageView {
+	func setImage(from url: URL) {
 		self.kf.setImage(with: url)
 	}
 }

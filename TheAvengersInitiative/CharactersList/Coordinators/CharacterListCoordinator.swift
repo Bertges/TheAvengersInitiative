@@ -36,9 +36,9 @@ final class CharacterListCoordinator: Coordinator {
 	
 	 func didSelectCharacter(_ character: Character) {
 		
-		let deitalvm: CharacterDetailViewModel = .init(character)
+		let deitalViewModel: CharacterDetailViewModel = .init(character)
 		
-		let controllerDetail: CharacterDetailViewController = .init(detailvm: deitalvm)
+		let controllerDetail: CharacterDetailViewController = .init(detailViewModel: deitalViewModel)
 		
 		characterDetailController = controllerDetail
 		navigation?.pushViewController(controllerDetail, animated: true)
