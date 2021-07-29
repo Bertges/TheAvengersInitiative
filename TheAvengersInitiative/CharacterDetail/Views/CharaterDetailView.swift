@@ -54,11 +54,11 @@ final class CharacterDetailView: UIView, ViewCode {
 		return name
 	}()
 
-	let detailvm : CharacterDetailViewModel
+	let detailViewModel : CharacterDetailViewModel
 	
-	init(detailvm: CharacterDetailViewModel) {
+	init(detailViewModel: CharacterDetailViewModel) {
 		
-		self.detailvm = detailvm
+		self.detailViewModel = detailViewModel
 		super.init(frame: .zero)
 		
 		setupViews()
