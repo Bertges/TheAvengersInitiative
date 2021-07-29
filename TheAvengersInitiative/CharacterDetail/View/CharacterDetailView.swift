@@ -10,10 +10,10 @@ import Kingfisher
 
 final class CharacterDetailView: UIView, ViewCode {
     
-    let detailvm: CharacterDetailViewModel
+    let detailViewModel: CharacterDetailViewModel
     
     init(detailvm: CharacterDetailViewModel) {
-        self.detailvm = detailvm
+        self.detailViewModel = detailvm
         super.init(frame: .zero)
         
         setupViews()
@@ -91,16 +91,12 @@ final class CharacterDetailView: UIView, ViewCode {
     
     // criar table
     
-    func setup(name: Character , comicsCount: Int, avatarUrl: URL) {
+    func setup(name: String , comicsCount: Int, avatarUrl: URL) {
         setupViews()
-
-        characterID.text = ""
+        
+        characterID.text = name
         characterComics.text = "\(comicsCount)"
         characterImage.kf.setImage(with: avatarUrl)
-    }
-    
-    func pushCharacters(_ character: CharacterDetailViewModel) {
-
     }
     
     func setupViewsHierarchy() {

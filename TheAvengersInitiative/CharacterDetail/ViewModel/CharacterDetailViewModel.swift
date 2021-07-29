@@ -15,15 +15,15 @@ final class CharacterDetailViewModel {
         self.character = character
     }
 
-    func name(at index: Int) -> String {
+    func name() -> String {
         return character.name
     }
 
-    func comicsCount(at index: Int) -> Int {
+    func comicsCount() -> Int {
         return character.comicList.available
     }
 
-    func avatarUrl(at index: Int) -> URL {
+    func avatarUrl() -> URL {
         let thumbnail: Character.Thumbnail = character.thumbnail
         return thumbnail.path.appendingPathExtension(thumbnail.thumbExtension)
     }

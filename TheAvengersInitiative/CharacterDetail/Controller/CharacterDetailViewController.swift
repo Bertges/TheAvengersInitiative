@@ -10,7 +10,7 @@ import UIKit
 final class CharacterDetailViewController: UIViewController {
     
     // Properties
-    lazy var _view: CharacterDetailView = {
+    private lazy var _view: CharacterDetailView = {
         let view: CharacterDetailView = .init(detailvm: detailvm)
         return view
     }()
