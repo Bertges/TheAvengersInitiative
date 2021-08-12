@@ -18,9 +18,9 @@ final class CharacterDetailViewModel {
     func name() -> String {
         return character.name
     }
-
-    func comicsCount() -> Int {
-        return character.comicList.available
+    
+    func comicsID() -> String {
+        return "\(character.id)"
     }
 
     func avatarUrl() -> URL {
@@ -28,5 +28,12 @@ final class CharacterDetailViewModel {
         return thumbnail.path.appendingPathExtension(thumbnail.thumbExtension)
     }
     
-    // let comic 
+    func comicTitle(at index: Int) -> String {
+        return character.comicList.items[index].title
+    }
+    
+    var numberOfRows: Int {
+        return character.comicList.items.count
+    }
+    
 }
