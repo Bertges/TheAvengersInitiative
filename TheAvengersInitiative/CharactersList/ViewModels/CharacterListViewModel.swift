@@ -41,7 +41,7 @@ final class CharacterListViewModel {
             switch result {
             case let .success(wrapper):
                 self.characteres = wrapper.data.results
-            case let .error(error):
+			case .error(_):
                 break
             }
 

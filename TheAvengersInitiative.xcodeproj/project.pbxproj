@@ -11,6 +11,8 @@
 		146D6DA226A742BE00617856 /* CharaterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D6DA126A742BE00617856 /* CharaterDetailView.swift */; };
 		14DD16DF26B06BBD003D6A93 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD16DE26B06BBD003D6A93 /* ImageView.swift */; };
 		14DD16E726B07A00003D6A93 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD16E626B07A00003D6A93 /* CharacterDetailViewModel.swift */; };
+		14F764CF26BB1F2E00AF799C /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F764CE26BB1F2E00AF799C /* Comic.swift */; };
+		14F764DF26C19E8C00AF799C /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F764DE26C19E8C00AF799C /* ListDetailView.swift */; };
 		7D392869268CDEA700561738 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D392868268CDEA700561738 /* RequestManager.swift */; };
 		7D392872268CE14700561738 /* CharactersListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D392871268CE14700561738 /* CharactersListWrapper.swift */; };
 		7D55FFBE26791A5300CBA8C9 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D55FFBD26791A5200CBA8C9 /* ViewCode.swift */; };
@@ -57,6 +59,8 @@
 		146D6DA126A742BE00617856 /* CharaterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharaterDetailView.swift; sourceTree = "<group>"; };
 		14DD16DE26B06BBD003D6A93 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		14DD16E626B07A00003D6A93 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		14F764CE26BB1F2E00AF799C /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		14F764DE26C19E8C00AF799C /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
 		7D392868268CDEA700561738 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		7D392871268CE14700561738 /* CharactersListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListWrapper.swift; sourceTree = "<group>"; };
 		7D55FFBD26791A5200CBA8C9 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				146D6DA126A742BE00617856 /* CharaterDetailView.swift */,
+				14F764DE26C19E8C00AF799C /* ListDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			children = (
 				7DBD9540267BC25200D98D7D /* Character.swift */,
 				7DBD9545267BC30900D98D7D /* ComicList.swift */,
+				14F764CE26BB1F2E00AF799C /* Comic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -458,9 +464,11 @@
 				7D55FFC32679201300CBA8C9 /* CharacterListCell.swift in Sources */,
 				7DFEC6FA26728EC40036A72B /* CharacterListCoordinator.swift in Sources */,
 				7D392872268CE14700561738 /* CharactersListWrapper.swift in Sources */,
+				14F764DF26C19E8C00AF799C /* ListDetailView.swift in Sources */,
 				7DFEC6EF26728E6C0036A72B /* CharactersListViewController.swift in Sources */,
 				7DFD2A0626597FA9005D38A7 /* ViewController.swift in Sources */,
 				7DA0E36F2684F7FE00395394 /* CharactersAPI.swift in Sources */,
+				14F764CF26BB1F2E00AF799C /* Comic.swift in Sources */,
 				1452146926AA889F002EDCC4 /* CharacterDetailViewController.swift in Sources */,
 				7DBD954E267BC6A000D98D7D /* CharacterListViewModel.swift in Sources */,
 				7DFEC6F526728E9F0036A72B /* Coordinator.swift in Sources */,
@@ -578,7 +586,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -617,7 +625,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiativeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -638,6 +646,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiativeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,7 +711,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -741,7 +750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiativeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -762,6 +771,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiativeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -826,7 +836,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -881,7 +891,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -941,7 +951,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiativeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -963,7 +973,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiativeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -984,6 +994,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiativeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1004,6 +1015,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534DZ9L868;
 				INFOPLIST_FILE = TheAvengersInitiativeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,8 +9,10 @@ import Foundation
 
 final class ComicList: Codable {
     let available: Int
+	let items: [Comic]
 
-    init(available: Int) {
+	init(available: Int, items: [Comic]) {
         self.available = available
+		self.items = items
     }
 }
