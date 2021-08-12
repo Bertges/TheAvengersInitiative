@@ -27,36 +27,23 @@ final class CharacterDetailView: UIView, ViewCode {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 10
+        stackView.alignment = .fill
         stackView.distribution = .fillProportionally
         return stackView
     }()
     
     // MARK: - Image
-    private let characterImageView: UIStackView = {
-        let stackView: UIStackView = .init(frame: .zero)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
-        return stackView
-    }()
     
-    private lazy var characterImage: UIImageView = {
+    private lazy var characterImageView: UIImageView = {
         let imageView: UIImageView = .init()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.kf.setImage(with: self.detailViewModel.avatarUrl())
         return imageView
     }()
     
-    // MARK: - ID e name
-    private let characterIDNameView: UIStackView = {
-        let stackView: UIStackView = .init(frame: .zero)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
-        return stackView
-    }()
+    // MARK: - ID e Name
     
-    private lazy var characterID: UILabel = {
+    private lazy var characterIDLabel: UILabel = {
         let label: UILabel = .init(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "\(self.detailViewModel.comicsID())      \(self.detailViewModel.name())"
@@ -64,13 +51,6 @@ final class CharacterDetailView: UIView, ViewCode {
     }()
     
     // MARK: - Comics
-    private let characterComicsView: UIStackView = {
-        let stackView: UIStackView = .init(frame: .zero)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
-        return stackView
-    }()
     
     private lazy var tableView: UITableView = {
         let tableView: UITableView = .init(frame: .zero)
@@ -83,27 +63,23 @@ final class CharacterDetailView: UIView, ViewCode {
     func setupViewsHierarchy() {
         addSubview(stackView)
         stackView.addArrangedSubview(characterImageView)
-        characterImageView.addArrangedSubview(characterImage)
-        
-        stackView.addArrangedSubview(characterIDNameView)
-        characterIDNameView.addArrangedSubview(characterID)
-        
-        stackView.addArrangedSubview(characterComicsView)
-        characterComicsView.addArrangedSubview(tableView)
+        stackView.addArrangedSubview(characterIDLabel)
+        stackView.addArrangedSubview(tableView)
     }
     
     func setupConstraints() {
         if #available(iOS 11.0, *) {
-            stackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+            stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
+            stackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
             
         }
         stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         
-        characterImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        characterIDNameView.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        characterComicsView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        characterImageView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        characterIDLabel.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        tableView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100).isActive = true
+       
     }
 
     func configureViews() {
