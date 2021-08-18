@@ -13,7 +13,8 @@ final class CharacterListCoordinator: Coordinator {
     let window: UIWindow
     var navigation: UINavigationController?
     var characterListController: CharactersListViewController?
-
+    var detailController: CharacterDetailViewController?
+    
     // Init
     init(window: UIWindow) {
         self.window = window
@@ -31,6 +32,10 @@ final class CharacterListCoordinator: Coordinator {
     }
 
     func didSelectCharacter(_ character: Character) {
+        let detailvm: CharacterDetailViewModel = .init(character: character)
+        let controller: CharacterDetailViewController = .init(detailvm: detailvm)
         
+        detailController = controller
+        navigation?.pushViewController(controller, animated: true)
     }
 }
